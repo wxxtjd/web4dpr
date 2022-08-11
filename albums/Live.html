@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Web - Live</title>
+    <meta charset="utf-8">
+    <style>
+      a {
+        text-decoration: none;
+        color : blue;
+      }
+      h1 {
+        font-size: 200%;
+        border-bottom: 2px solid grey;
+        margin: 0;
+        padding: 20px;
+        text-align: center;
+      }
+      li {
+        margin: 2px;
+      }
+      body {
+        margin: 0;
+      }
+      img {
+        width: 200px;
+      }
+      .page_link {
+        color : grey;
+      }
+      #active {
+        color : black;
+      }
+      img {
+        width: 205px;
+      }
+      #grid_album {
+        display: grid;
+        grid-template-rows: 205px;
+      }
+      #grid_album_list {
+        display: grid;
+        grid-template-columns: 205px 205px;
+        grid-gap: 40px;
+      }
+      #grid .album_title {
+        display: flex;
+        justify-content: center;
+      }
+      #grid {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+      }
+      #grid .page_list {
+        font-size: 110%;
+        border-right: 2px solid grey;
+        width: 216px;
+        padding: 7px;
+        margin: 0;
+      }
+      #grid .artist_list {
+        padding-left: 30px;
+      }
+      #grid ul, ol {         /* 안겹침 */
+        margin: 10px;
+        margin-left: 18px;
+      }
+      #grid h3 {
+        margin-bottom: 10px;
+      }
+      @media(max-width:800px){
+        #grid {
+          display: block;
+        }
+        #grid_album_list {
+          display: grid;
+          grid-template-columns: 205px 205px;
+          grid-gap: 40px;
+        }
+        #grid ol {
+          border-right: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>INFORMATION OF DPR</h1>
+  <div id="grid">
+    <div class = "page_list">
+      <strong>Albums Of</strong>
+      <ol class="artist_list">
+        <strong><li><a class="page_link" href="Ian.html">DPR Ian</a></li></strong>
+        <strong><li><a class="page_link" id="active" href="Live.html">DPR Live</a></li></strong>
+        <strong><li><a class="page_link" href="Cream.html">DPR Cream</a></li></strong>
+      </ol>
+      <strong><a style="font-size:15px;color:grey;text-decoration:none;" href="../index.html">back to home</a></strong>
+    </div>
+    <div>
+      <h3>Albums Of DPR Live</h3>
+      <div id = "grid_album_list">
+        <div id = "grid_album">
+          <a href="https://www.youtube.com/watch?v=d-Z0Td5KEXA&list=OLAK5uy_nY9vJNOiFsuUe4vsinqpgy3lnk8ykB7lE&index=2" target="_blank"><img src="IS ANYBODY OUT THERE.png"></a>
+          <strong class="album_title">IS ANYBODY OUT THERE</strong>
+        </div>
+        <div id = "grid_album">
+          <a href="https://www.youtube.com/watch?v=z0C5I2sClT0&list=OLAK5uy_nsWJf9-fYtZpkffYVHOXNqxsiC-YKxlEE&index=2" target="_blank"><img src="Coming To You Live.png"></a>
+          <strong class = "album_title">Coming To You Live</strong>
+        </div>
+        <div id = "grid_album">
+          <a href="https://www.youtube.com/watch?v=-aigq0tYcok&list=OLAK5uy_lxaPJOUyQJfZWfoI2fG9sLNsYhEjq7EFw&index=2" target="_blank"><img src="Her.png"></a>
+          <strong class= "album_title">Her</strong>
+        </div>
+        <div id = "grid_album">
+          <a href="https://www.youtube.com/watch?v=XA-jJVxxadA&list=OLAK5uy_n72csysg-DOEpRN-CKj8dwV4U453VEIC4" target="_blank"><img src="IITE COOL.png"></a>
+          <strong class="album_title">IITE COOL</strong>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
