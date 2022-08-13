@@ -8,9 +8,6 @@
         text-decoration: none;
         color : blue;
       }
-      .page_link {
-        color : grey;
-      }
       h1 {
         font-size: 200%;
         border-bottom: 2px solid grey;
@@ -23,6 +20,28 @@
       }
       body {
         margin: 0;
+      }
+      .page_link {
+        color : gray;
+      }
+      .btn {
+        margin-left: 0;
+      }
+      #For_Night {
+        padding: 1px 7px;
+      }
+      #For_Day {
+        padding: 1px 14px;
+      }
+      #For_Night:hover {
+        padding: 2px 8px;
+        transition-duration: 0.3s;
+        box-shadow: 3px 3px 7px rgba(0,0,0,0.2);
+      }
+      #For_Day:hover {
+        padding: 2px 15px;
+        transition-duration: 0.3s;
+        box-shadow: 3px 3px 7px rgba(255,255,255,0.3);
       }
       #active {
         color : black;
@@ -58,17 +77,41 @@
   <body>
     <h1>INFORMATION OF DPR</h1>
   <div id="grid">
-    <ol>
-      <strong><li><a class="page_link" href="whoareindpr.html">Who Are In DPR?</a></li></strong>
-      <strong><li><a class="page_link" href="albumsofmembers.html">Albums Of Members</a></li></strong>
-      <strong><li><a class="page_link" href="albumofdpr.html">Album Of DPR</a></li></strong>
-    </ol>
+    <div>
+      <ol>
+        <strong><li><a class="page_link" href="whoareindpr.html">Who Are In DPR?</a></li></strong>
+        <strong><li><a class="page_link" href="albumsofmembers.html">Albums Of Members</a></li></strong>
+        <strong><li><a class="page_link" href="albumofdpr.html">Album Of DPR</a></li></strong>
+        <input class = "btn" id="For_Night" type="button" value="NIGHT" onclick="
+        if(document.querySelector('.btn').value === 'NIGHT'){
+          document.querySelector('body').style.backgroundColor = 'black';
+          document.querySelector('body').style.color = 'white';
+          document.querySelector('#For_Night').value = 'DAY';
+          document.querySelector('#For_Night').id = 'For_Day';
+        }
+        else {
+          document.querySelector('body').style.backgroundColor = 'white';
+          document.querySelector('body').style.color = 'black';
+          document.querySelector('#For_Day').value = 'NIGHT';
+          document.querySelector('#For_Day').id = 'For_Night';
+        }
+        ">
+      </ol>
+      <strong style="font-size:13px;">That button is for test. Not perfect.</strong>
+    </div>
     <div>
     <h3>DPR</h3>
       <p>
         This Space Is For Information.<br>
         Please Choose Information You Want.
       </p>
+      <!-- <script>
+        if(document.querySelector('#For_Night_Day').value === "NIGHT") {
+          document.querySelector('body').style.backgroundColor = 'black';
+          document.querySelector('body').style.color = 'white';
+          document.querySelector('#For_Night_Day').value = 'DAY';
+        }
+      </script> -->
     </div>
   </div>
   </body>
